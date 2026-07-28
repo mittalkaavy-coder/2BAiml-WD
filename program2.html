@@ -8,7 +8,13 @@
       function sum() {
         let age = parseInt(prompt("Enter value of a: "));
         if (age >= 18) {
-          alert("You are eligible for voting");
+          let c = confirm("Do you want to submmit your response");
+          if (c) {
+            alert("Your response is submitted");
+            alert("Your are eligible to vote");
+          } else {
+            alert("Thank You!");
+          }
         } else {
           alert("You are not eligible");
         }
