@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      let name = "Kaavy";
+      let last = new String();
+      last = "Mittal";
+      let email = "mittalkaavy@gmail.com";
+      let fullName = name.concat(last);
+      document.write(fullName);
+      document.write("<br>");
+      let d = name.toUpperCase();
+      document.write(d);
+      document.write("<br>");
+      let e = last.toLowerCase();
+      document.write(e);
+      document.write("<br>");
+      let f = name.charAt(0);
+      document.write(f);
+      document.write("<br>");
+      let g = name.indexOf("a");
+      document.write(g);
+      document.write("<br>");
+      let h = name.lastIndexOf("t");
+      document.write(h);
+      document.write("<br>");
+      let i = name.slice(1, 4);
+      document.write(i);
+      document.write("<br>");
+      let j = name.includes("Kaavy");
+      document.write(j);
+      document.write("<br>");
+      let k = last.replace("Mittal", "sir");
+      document.write(k);
+      document.write("<br>");
+    </script>
+  </body>
+</html>
