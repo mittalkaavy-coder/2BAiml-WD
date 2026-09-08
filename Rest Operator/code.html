@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Operator in JavaScript</title>
+    <script>
+      function sum(...value) {
+        let total = 0;
+        for (let n of value) {
+          total += n;
+        }
+        return total;
+      }
+      console.log(sum(10, 20, 30));
+      console.log(sum(10, 20, 30, 40));
+
+      //   By using fix parameter
+      function sum1(name, ...value) {
+        let total = 0;
+        for (let n of value) {
+          total += n;
+        }
+        console.log("name: ", name);
+        console.log("total: ", total);
+      }
+      sum1("Kaavy", 10, 20, 30);
+      sum1("Kaavy", 10, 20, 30, 40);
+    </script>
+  </head>
+  <body></body>
+</html>
