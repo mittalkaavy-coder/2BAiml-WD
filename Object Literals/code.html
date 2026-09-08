@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object literals</title>
+    <script>
+      // let name = "Kaavy"
+      // --------OR------------
+      // let name = new string
+      //     name = "Kaavy"
+
+      let name = "Kaavy";
+      let rollNumber = 88;
+      let data = {
+        name,
+        rollNumber,
+      };
+      console.log(data.name);
+      console.log(data.rollNumber);
+
+      //Case 2
+
+      let f = "FirstName";
+      let l = "LastName";
+
+      let data1 = {
+        [f]: "Kaavy",
+        [l]: "Mittal",
+
+        show() {
+          console.log(this.FirstName);
+          console.log(this.LastName);
+        },
+      };
+      console.log(data1["show"]());
+      console.log(data1.FirstName);
+      console.log(data1.LastName);
+    </script>
+  </head>
+  <body>
+    <h1>yyyoyoyoyyoyoyyoo</h1>
+  </body>
+</html>
