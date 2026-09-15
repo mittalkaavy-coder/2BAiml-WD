@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+    <script>
+      /*class Hello {
+        constructor() {
+          console.log("Hello Constructor");
+        }
+      }
+
+      class Hi extends Hello {
+        constructor() {
+          super();
+          console.log("Hi Constructor");
+        }
+      }
+      let h1 = new Hi();*/
+
+      class hello {
+        info() {
+          console.log("info Hello");
+        }
+      }
+      class hi extends hello {
+        info() {
+          super.info();
+          console.log("info Hi");
+        }
+      }
+
+      let h1 = new hi();
+      h1.info();
+    </script>
+  </head>
+  <body></body>
+</html>
