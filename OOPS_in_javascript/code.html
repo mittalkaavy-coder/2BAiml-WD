@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPS In Javascript</title>
+    <script>
+      class student {
+        name;
+        rollNumber;
+
+        constructor(name, rollNumber) {
+          this.name = name;
+          this.rollNumber = rollNumber;
+        }
+        display() {
+          console.log(this.name);
+          console.log(this.rollNumber);
+        }
+        static hello() {
+          console.log("Hello Vikas");
+        }
+      }
+      s1 = new student("Vikas", 101);
+      s2 = new student("Vivek", 102);
+
+      s1.display();
+      s2.display();
+      student.hello();
+    </script>
+  </head>
+  <body></body>
+</html>
