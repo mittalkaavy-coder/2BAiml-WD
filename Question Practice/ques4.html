@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class product {
+        constructor(id, name, price) {
+          this.id = id;
+          this.name = name;
+          this.price = price;
+        }
+        display() {
+          console.log(`ID: ${this.id}`);
+          console.log(`Name: ${this.name}`);
+          console.log(`Price: ₹${this.price}`);
+        }
+        static compareprice(p1, p2) {
+          if (p1.price > p2.price) {
+            console.log(`${p1.name} is more expensive than ${p2.name}`);
+          } else if (p1.price < p2.price) {
+            console.log(`${p2.name} is more expensive than ${p1.name}`);
+          } else {
+            console.log(`${p1.name} and ${p2.name} have the same price`);
+          }
+        }
+      }
+      class electronic extends product {
+        constructor(id, name, price, warranty) {
+          super(id, name, price);
+          this.warranty = warranty;
+        }
+        display() {
+          super.display();
+          console.log(`Warranty: ${this.warranty}`);
+        }
+      }
+      let p1 = new product(101, "Laptop", 50000);
+      let p2 = new product(102, "Mobile", 30000);
+      let e1 = new electronic(103, "TV", 40000, "2 years");
+
+      p1.display();
+      p2.display();
+      e1.display();
+
+      console.log(`Discounted price of ${p1.getDiscountedPrice(10)}`);
+      product.compareprice(p1, p2);
+      product.compareprice(p1, e1);
+    </script>
+  </body>
+</html>

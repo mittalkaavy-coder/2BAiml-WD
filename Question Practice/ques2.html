@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Account Managemnt System</title>
+    <script>
+      class BankAccount {
+        constructor(accountNo, holderName, balance) {
+          this.accountNo = accountNo;
+          this.holderName = holderName;
+          this.balance = balance;
+        }
+
+        deposit(amount) {
+          this.balance += amount;
+          console.log(`${amount} is sucessfuly deposited`);
+        }
+        withdraw(amount) {
+          if (this.balance >= amount) {
+            this.balance -= amount;
+          } else {
+            console.log(
+              `Withdrwal Amount ${amount} is greater than Balance Amount ${this.balance}`,
+            );
+          }
+        }
+        displayBalance() {
+          console.log(`Account ${this.accountNo} has ${this.balance} balance`);
+        }
+        static bankInfo(account) {
+          console.log("Bank Name: ABES Bank");
+          console.log("Account Number: ", account.accountNo);
+          console.log("Account Holder Name: ", account.holderName);
+          console.log("Account Balance: ", account.balance);
+        }
+      }
+
+      let account1 = new BankAccount(101120, "Vikas", 21000);
+      let account2 = new BankAccount(103560, "Vivek", 200590);
+
+      BankAccount.bankInfo(account1);
+
+      account1.deposit(1002);
+      account1.displayBalance();
+
+      BankAccount.bankInfo(account2);
+      account2.withdraw(111265);
+      account2.displayBalance();
+    </script>
+  </head>
+  <body></body>
+</html>
