@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Vehicle {
+        constructor(vehicleNo, driverName, distance) {
+          this.vehicleNo = vehicleNo;
+          this.driverName = driverName;
+          this.distance = distance;
+        }
+
+        calculateFare() {
+          console.log("Fare calculation is not defined for the Vehicle");
+        }
+
+        static bookingPlatform() {
+          console.log("Booking Platform: ABES Cab Services");
+        }
+      }
+
+      class Car extends Vehicle {
+        constructor(vehicleNo, driverName, distance) {
+          super(vehicleNo, driverName, distance);
+        }
+
+        calculateFare() {
+          return this.distance * 15;
+        }
+      }
+
+      class Bike extends Vehicle {
+        constructor(vehicleNo, driverName, distance) {
+          super(vehicleNo, driverName, distance);
+        }
+
+        calculateFare() {
+          return this.distance * 8;
+        }
+      }
+
+      Vehicle.bookingPlatform();
+
+      let car = new Car("CAR101", "Vikas", 20);
+      let bike = new Bike("BIKE202", "Amit", 25);
+
+      console.log("Car Fare: Rs. " + car.calculateFare());
+      console.log("Bike Fare: Rs. " + bike.calculateFare());
+    </script>
+  </head>
+  <body></body>
+</html>

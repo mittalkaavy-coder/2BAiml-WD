@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Person {
+        constructor(id, name, age) {
+          this.id = id;
+          this.name = name;
+          this.age = age;
+          Person.count++;
+        }
+
+        displayDetails() {
+          console.log("ID: " + this.id);
+          console.log("Name: " + this.name);
+          console.log("Age: " + this.age);
+        }
+
+        static displayCount() {
+          console.log("Total Persons: " + Person.count);
+        }
+      }
+
+      Person.count = 0;
+
+      class Doctor extends Person {
+        constructor(id, name, age, specialization, consultationFee) {
+          super(id, name, age);
+          this.specialization = specialization;
+          this.consultationFee = consultationFee;
+        }
+
+        displayDetails() {
+          console.log("ID: " + this.id);
+          console.log("Name: " + this.name);
+          console.log("Age: " + this.age);
+          console.log("Specialization: " + this.specialization);
+          console.log("Consultation Fee: " + this.consultationFee);
+        }
+      }
+
+      class Patient extends Person {
+        constructor(id, name, age, disease, roomNo) {
+          super(id, name, age);
+          this.disease = disease;
+          this.roomNo = roomNo;
+        }
+
+        displayDetails() {
+          console.log("ID: " + this.id);
+          console.log("Name: " + this.name);
+          console.log("Age: " + this.age);
+          console.log("Disease: " + this.disease);
+          console.log("Room No: " + this.roomNo);
+        }
+      }
+
+      let doctor1 = new Doctor(101, "Rahul", 40, "Cardiology", 1000);
+      let doctor2 = new Doctor(102, "Amit", 45, "Neurology", 1200);
+
+      let patient1 = new Patient(201, "Riya", 25, "Fever", 101);
+      let patient2 = new Patient(202, "Neha", 30, "Diabetes", 102);
+
+      doctor1.displayDetails();
+      doctor2.displayDetails();
+
+      patient1.displayDetails();
+      patient2.displayDetails();
+
+      Person.displayCount();
+    </script>
+  </head>
+  <body></body>
+</html>
